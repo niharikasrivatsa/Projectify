@@ -1,33 +1,44 @@
-Helloooooo
+# Projectify
 
-1) Install Nodejs [Download | Node.js (nodejs.org)](https://nodejs.org/en/download/) 
+## Overview
+Projectify is a *super cool slay girlboss* app that was sparked at a hackathon we randomly decided to participate in (*we <3 WIE*). 
+"**What is Projectify?**" you ask? Well, Projectify is a mobile app (*work in progress #manifesting*) that connects high school girls 
+looking to work on side projects with others. Through the app they can find side project inspiration, share their **GRAND** project
+ideas, meet people to work with on the projects, and earn accomplishments badges to build their professional portfolio.
 
-- (Check node version (must be 12 or higher) )`node -v`
+We had like **4 hours** (*yikes!*) to come up with this all, so it was pretty messy you might imagine. BUT! We won second place in
+the hackathon (woot woot #women #in #stem)!! And, that motivated us to really trying to develop this (*syde*) project(*ify ;*). This 
+is a first for a lot of us, so enjoy this archive of our *blood, sweat, and tears* + all the lessons we learn along the way! 😍
 
-2) Download expo client on phone - this is to help us test on an actual device 
+## Team
+💻 **Developer:** [Niharika Srivatsa](https://github.com/niharikasrivatsa)  
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a1363048-cd7b-440e-8422-db7826ab6fdc/Untitled.png)
+💻 **Developer:** [Vedanshee Patel](https://github.com/vedansheepatel)
 
-3) Add Extentions on VS code 
+✏️ **Designer:** [Janvi Ganatra](https://github.com/janviganatra)
 
-react native tools by Microsoft 
+✏️ **Designer:** [Rachel Joy Copreros](https://github.com/rjoyc)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/138872ab-1141-4e97-ad2e-1e2e22cdc10f/Untitled.png)
+(aka *syde bytes* <3)
 
-react native/react/redux
+## Development Setup
+First and foremost, clone the project!
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/19f33715-4830-4507-8891-784561fbd22e/Untitled.png)
+1) **Install Nodejs**
+    - [Download | Node.js (nodejs.org)](https://nodejs.org/en/download/) 
+    - check node version (must be 12 or higher) 
+        -  run `node -v`
 
-Prettier 
+2) **Download Expo Go/Expo Client on your phone**
+    - this is to help us test on an actual device 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b97a859e-a80d-4f0e-8613-3ef1a45842bd/Untitled.png)
+3) **Add Extentions on VS code**
+    - react native tools by Microsoft
+    - react native/react/redux by EQuimper
+    - prettier - code formatter
+    - material icon theme by Philipp Kief
 
-Material icon theme
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/df91f08e-eb80-4649-922a-aa6228da2b17/Untitled.png)
-
-4) `npm start`
-
-HI GUYS so, we have the basic files from the video tutorial set up and have the dev environment. We also have an APP that we can TEST on. 
-
-YAYAYAYAAY GO DEV TEAM <3
+4) **Run `npm start`**
+    - sometimes you need to run `npm install` before running this
+    - scan the QR code in the terminal with your phone
+    - type `r` in the terminal to reload the app on your phone
