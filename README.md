@@ -42,3 +42,5 @@ First and foremost, clone the project!
     - sometimes you need to run `npm install` before running this
     - scan the QR code in the terminal with your phone
     - type `r` in the terminal to reload the app on your phone
+
+Note: always remember to `git pull` for the most updated version of the code before making changes!
