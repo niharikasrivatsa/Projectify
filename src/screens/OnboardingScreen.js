@@ -3,7 +3,7 @@ import { SafeAreaView, View, Text, TouchableOpacity, Image } from 'react-native'
 
 import OnboardingButton from '../components/OnboardingButton';
 
-const OnboardingScreen = () => {
+const OnboardingScreen = ({navigation}) => {
   return (
     <SafeAreaView
       style={{
@@ -20,7 +20,7 @@ const OnboardingScreen = () => {
           }}
           source={require("../assets/images/ProjectifyIcon.png")} />
       </View>
-      <OnboardingButton label={"Let's Begin"} onPress={()=>{}} />
+      <OnboardingButton label={"Let's Begin"} onPress={()=>navigation.navigate('Register')}/>
     </SafeAreaView>
   );
 };
