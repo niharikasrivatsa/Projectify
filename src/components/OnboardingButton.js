@@ -9,10 +9,10 @@ export default function OnboardingButton({label, onPress}) {
           onPress={onPress}
           style={{
             backgroundColor: '#8265DB',
-            padding: 15,
+            padding: 10,
             width: '80%',
             borderRadius: 8,
-            marginTop: 50,
+            marginTop: 30,
             flexDirection: 'row',
             justifyContent: 'center',
           }}>

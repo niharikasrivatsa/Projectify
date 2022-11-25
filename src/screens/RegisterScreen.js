@@ -6,6 +6,7 @@ import {
   Text,
   TextInput,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 
 import InputField from '../components/InputField';
@@ -22,7 +23,14 @@ const RegisterScreen = ({navigation}) => {
       backgroundColor: '#fff',
       //alignItems: 'center',
       }}>
-
+        <Image 
+          style={{ 
+            width: 200, 
+            height: 50,
+            alignSelf: 'center',
+            marginBottom: 20,
+          }}
+          source={require("../assets/images/OnboardingStatusbar1.png")} />
         <Text
           style={{
             fontFamily: 'Nunito_700Bold',
