@@ -19,82 +19,80 @@ const RegisterScreen = ({navigation}) => {
     <SafeAreaView style={{
       flex: 1, 
       justifyContent: 'center',
-      alignItems: 'center',
+      backgroundColor: '#fff',
+      //alignItems: 'center',
       }}>
 
         <Text
           style={{
-            fontFamily: 'Roboto-Medium',
-            fontSize: 28,
-            fontWeight: '500',
+            fontFamily: 'Nunito_700Bold',
+            fontSize: 36,
             color: '#333',
+            marginHorizontal: 30,
+            textAlign: 'center',
             marginBottom: 30,
           }}>
-          Register
+          Create your account!
         </Text>
-        <InputField
-          label={'Full Name'}
-          // icon={
-          //   <Ionicons
-          //     name="person-outline"
-          //     size={20}
-          //     color="#666"
-          //     style={{marginRight: 5}}
-          //   />
-          // }
-        />
 
-        <InputField
-          label={'Email ID'}
-          icon={
-            <MaterialIcons
-              name="alternate-email"
-              size={20}
-              color="#666"
-              style={{marginRight: 5}}
-            />
-          }
-          keyboardType="email-address"
-        />
-
-        <InputField
-          label={'Password'}
-          // icon={
-          //   <Ionicons
-          //     name="ios-lock-closed-outline"
-          //     size={20}
-          //     color="#666"
-          //     style={{marginRight: 5}}
-          //   />
-          // }
-          inputType="password"
-        />
-
-        <InputField
-          label={'Confirm Password'}
-          // icon={
-          //   <Ionicons
-          //     name="ios-lock-closed-outline"
-          //     size={20}
-          //     color="#666"
-          //     style={{marginRight: 5}}
-          //   />
-          // }
-          inputType="password"
-        />
-        
-        <OnboardingButton label={'Register'} onPress={() => {}} />
-
-        <View
+      <Text
           style={{
-            flexDirection: 'row',
-            justifyContent: 'center',
-            marginBottom: 30,
-          }}>
-          <Text>Already registered?</Text>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Text style={{color: '#AD40AF', fontWeight: '700'}}> Login</Text>
-          </TouchableOpacity>
+            fontFamily: 'Nunito_400Regular',
+            fontSize: 16,
+            color: '#333',
+            marginLeft: 29,
+            textAlign: 'left',
+        }}> 
+          Username <Text style={{color:'#FF0000'}}>*</Text>
+        </Text>
+        <View style={{alignItems: 'center'}} >
+        <InputField/>
+        </View>
+
+        <Text
+          style={{
+            fontFamily: 'Nunito_400Regular',
+            fontSize: 16,
+            marginLeft: 29,
+            textAlign: 'left',
+        }}> 
+          Full Name <Text style={{color:'#FF0000'}}>*</Text>
+        </Text>
+        <View style={{alignItems: 'center'}} >
+        <InputField/>
+        </View>
+
+        <Text
+          style={{
+            fontFamily: 'Nunito_400Regular',
+            fontSize: 16,
+            color: '#333',
+            marginLeft: 29,
+            textAlign: 'left',
+        }}> 
+          School Email <Text style={{color:'#FF0000'}}>*</Text>
+        </Text>
+        <View style={{alignItems: 'center'}} >
+        <InputField/>
+        </View>
+
+        <Text
+          style={{
+            fontFamily: 'Nunito_400Regular',
+            fontSize: 16,
+            color: '#333',
+            marginLeft: 29,
+            textAlign: 'left',
+        }}> 
+          Password <Text style={{color:'#FF0000'}}>*</Text>
+        </Text>
+
+        <View style={{alignItems: 'center'}} >
+        <InputField/>
+        </View>
+
+        <View style ={{alignItems: 'center'}}>
+        <OnboardingButton label={'Sign Up'} onPress={() => {}} />
         </View>
     </SafeAreaView>
   );
