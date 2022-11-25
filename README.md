@@ -43,4 +43,18 @@ First and foremost, clone the project!
     - scan the QR code in the terminal with your phone
     - type `r` in the terminal to reload the app on your phone
 
-Note: always remember to `git pull` for the most updated version of the code before making changes!
+## Git Stuff
+Note: install git lol [(search it up)](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+### Making + Pushing Changes
+1) Always run `git pull` for the most updated version of the code before making changes!
+2) Make your changes to the code
+3) Add all files you want to push: 
+    - `git add .` to add all changed files
+    - `git add [filepath]` to add a specific file
+4) Commit the files + add a cute/informative message 😻
+    - `git commit -m "describe your changes"`
+5) Push your commit!
+    - `git push`
+    - YAYAYAY u did it fr ‼️🎉
+
+Note: you can also do this through VS Code in Source Control
