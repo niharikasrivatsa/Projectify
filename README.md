@@ -1,7 +1,7 @@
 # Projectify
 
 ## Overview
-Projectify is a *super cool slay girlboss* app that was sparked at a hackathon we randomly decided to participate in (*we <3 WIE*). 
+Projectify is a *super cool slay girlboss* app that was born at a hackathon we randomly decided to participate in (*we <3 WIE*). 
 "**What is Projectify?**" you ask? Well, Projectify is a mobile app (*work in progress #manifesting*) that connects high school girls 
 looking to work on side projects with others. Through the app they can find side project inspiration, share their **GRAND** project
 ideas, meet people to work with on the projects, and earn accomplishments badges to build their professional portfolio.
