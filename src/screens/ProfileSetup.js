@@ -15,7 +15,7 @@ import OnboardingButton from '../components/OnboardingButton';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 //import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const RegisterScreen = ({navigation}) => {
+const ProfileSetupScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{
       flex: 1, 
@@ -30,7 +30,7 @@ const RegisterScreen = ({navigation}) => {
             alignSelf: 'center',
             marginBottom: 20,
           }}
-          source={require("../assets/images/OnboardingStatusbar1.png")} />
+          source={require("../assets/images/OnboardingStatusbar3.png")} />
         <Text
           style={{
             fontFamily: 'Nunito_700Bold',
@@ -38,20 +38,30 @@ const RegisterScreen = ({navigation}) => {
             color: '#333',
             marginHorizontal: 30,
             textAlign: 'center',
-            marginBottom: 30,
+            marginBottom: 5,
           }}>
-          Create your account!
+          Hello <Text style ={{color:'#FA8C47'}}>Rachel</Text>, 
+        </Text>
+        <Text
+        style={{
+            fontFamily: 'Nunito_400Regular',
+            fontSize: 16,
+            color: '#737171',
+            marginHorizontal: 30,
+            textAlign: 'center',
+            marginBottom: 38,
+        }}>
+            Tell us about yourself 
         </Text>
 
       <Text
           style={{
             fontFamily: 'Nunito_400Regular',
             fontSize: 16,
-            color: '#333',
             marginLeft: 29,
             textAlign: 'left',
         }}> 
-          Username <Text style={{color:'#FF0000'}}>*</Text>
+          What grade are you in?
         </Text>
         <View style={{alignItems: 'center'}} >
         <InputField/>
@@ -63,8 +73,9 @@ const RegisterScreen = ({navigation}) => {
             fontSize: 16,
             marginLeft: 29,
             textAlign: 'left',
+            marginTop: 18,
         }}> 
-          Full Name <Text style={{color:'#FF0000'}}>*</Text>
+          What are your pronouns? 
         </Text>
         <View style={{alignItems: 'center'}} >
         <InputField/>
@@ -74,36 +85,21 @@ const RegisterScreen = ({navigation}) => {
           style={{
             fontFamily: 'Nunito_400Regular',
             fontSize: 16,
-            color: '#333',
             marginLeft: 29,
             textAlign: 'left',
+            marginTop: 18,
         }}> 
-          School Email <Text style={{color:'#FF0000'}}>*</Text>
+          What city are you located? 
         </Text>
-        <View style={{alignItems: 'center'}} >
-        <InputField/>
-        </View>
-
-        <Text
-          style={{
-            fontFamily: 'Nunito_400Regular',
-            fontSize: 16,
-            color: '#333',
-            marginLeft: 29,
-            textAlign: 'left',
-        }}> 
-          Password <Text style={{color:'#FF0000'}}>*</Text>
-        </Text>
-
         <View style={{alignItems: 'center'}} >
         <InputField/>
         </View>
 
         <View style ={{alignItems: 'center'}}>
-        <OnboardingButton label={'Sign Up'} onPress={()=>navigation.navigate('ProfileSetup')} />
+        <OnboardingButton label={'Next'} onPress={() => {}} />
         </View>
     </SafeAreaView>
   );
 };
 
-export default RegisterScreen;
+export default ProfileSetupScreen;
