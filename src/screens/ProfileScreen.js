@@ -9,7 +9,7 @@ export default function ProfileScreen ({navigation}) {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#CECECE',
+        backgroundColor: '#F4F6F9',
       }}>
       <Text>Profile Screen</Text>
     </SafeAreaView>

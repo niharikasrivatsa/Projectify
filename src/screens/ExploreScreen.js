@@ -10,7 +10,7 @@ export default function ExploreScreen ({navigation}) {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#CECECE',
+        backgroundColor: '#F4F6F9',
       }}>
       <Text>Explore Screen</Text>
     </SafeAreaView>

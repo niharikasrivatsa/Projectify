@@ -25,10 +25,10 @@ const LoginScreen = ({navigation}) => {
       }}>
         <Image 
           style={{ 
-            width: 300, 
-            height: 300,
+            width: 320, 
+            height: 320,
             alignSelf: 'center',
-            marginBottom: 20,
+            marginTop: 5,
           }}
           source={require("../assets/images/ProjectifyIcon.png")} />
         
@@ -58,20 +58,33 @@ const LoginScreen = ({navigation}) => {
         <View style={{alignItems: 'center'}} >
         <InputField/>
         </View>
-        <Text onPress={() => navigation.navigate('Forgot')}>
+
+        <View style ={{alignItems: 'center', marginBottom: 18}}>
+        <OnboardingButton label={'Log In'} onPress={()=>navigation.navigate('Register')} />
+        </View>
+
+        <View style={{marginBottom: 70}}>
+          <Text onPress={() => navigation.navigate('Forgot')}>
           <Text  style={{ 
-            textDecorationLine: 'underline',
+            fontFamily: 'Nunito_400Regular',
+            fontSize: 16,
             textAlign: 'center',
-            marginTop:30,
             }}>
             Forgot your password?
           </Text>
-          
-        </Text>
-
-        <View style ={{alignItems: 'center'}}>
-        <OnboardingButton label={'Log In'} onPress={() => {}} />
+          </Text>
         </View>
+
+        <Text onPress={() => navigation.navigate('Register')}>
+          <Text  style={{ 
+            fontFamily: 'Nunito_400Regular',
+            fontSize: 16,
+            textAlign: 'center',
+            }}>
+            Don’t have an account? <Text style ={{color:'#FA8C47'}}>Join</Text>
+          </Text>
+          </Text>
+          
     </SafeAreaView>
   );
 };

@@ -8,6 +8,7 @@ import {
 import OnboardingButton from '../components/OnboardingButton';
 import IntrestButtons from '../components/MultiSelectIntrests';
 import SkillsButtons from '../components/MultiSelectSkills';
+import AppStack from '../navigations/AppStack';
 
 const IntrestSkillSetupScreen = ({navigation}) => {
   return (

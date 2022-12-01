@@ -8,9 +8,9 @@ export default function AccomplishmentsScreen ({navigation}) {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#CECECE',
+        backgroundColor: '#F4F6F9',
       }}>
-      <Text>Accomplishments Screen</Text>
+      <Text>Achievements Screen</Text>
     </SafeAreaView>
   );
 };
