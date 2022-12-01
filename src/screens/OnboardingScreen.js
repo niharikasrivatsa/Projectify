@@ -7,7 +7,7 @@ const OnboardingScreen = ({navigation}) => {
   return (
     <SafeAreaView
       style={{
-        flex: '1',
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#fff',
@@ -20,7 +20,7 @@ const OnboardingScreen = ({navigation}) => {
           }}
           source={require("../assets/images/ProjectifyIcon.png")} />
       </View>
-      <OnboardingButton label={"Let's Begin"} onPress={()=>navigation.navigate('Register')}/>
+      <OnboardingButton label={"Let's Begin"} onPress={()=>navigation.navigate('Login')}/>
     </SafeAreaView>
   );
 };

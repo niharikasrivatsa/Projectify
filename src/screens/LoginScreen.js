@@ -15,7 +15,7 @@ import OnboardingButton from '../components/OnboardingButton';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 //import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const RegisterScreen = ({navigation}) => {
+const LoginScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{
       flex: 1, 
@@ -25,24 +25,13 @@ const RegisterScreen = ({navigation}) => {
       }}>
         <Image 
           style={{ 
-            width: 200, 
-            height: 50,
+            width: 300, 
+            height: 300,
             alignSelf: 'center',
             marginBottom: 20,
           }}
-          source={require("../assets/images/OnboardingStatusbar1.png")} />
-        <Text
-          style={{
-            fontFamily: 'Nunito_700Bold',
-            fontSize: 36,
-            color: '#333',
-            marginHorizontal: 30,
-            textAlign: 'center',
-            marginBottom: 30,
-          }}>
-          Create your account!
-        </Text>
-
+          source={require("../assets/images/ProjectifyIcon.png")} />
+        
       <Text
           style={{
             fontFamily: 'Nunito_400Regular',
@@ -64,46 +53,27 @@ const RegisterScreen = ({navigation}) => {
             marginLeft: 29,
             textAlign: 'left',
         }}> 
-          Full Name <Text style={{color:'#FF0000'}}>*</Text>
-        </Text>
-        <View style={{alignItems: 'center'}} >
-        <InputField/>
-        </View>
-
-        <Text
-          style={{
-            fontFamily: 'Nunito_400Regular',
-            fontSize: 16,
-            color: '#333',
-            marginLeft: 29,
-            textAlign: 'left',
-        }}> 
-          School Email <Text style={{color:'#FF0000'}}>*</Text>
-        </Text>
-        <View style={{alignItems: 'center'}} >
-        <InputField/>
-        </View>
-
-        <Text
-          style={{
-            fontFamily: 'Nunito_400Regular',
-            fontSize: 16,
-            color: '#333',
-            marginLeft: 29,
-            textAlign: 'left',
-        }}> 
           Password <Text style={{color:'#FF0000'}}>*</Text>
         </Text>
-
         <View style={{alignItems: 'center'}} >
         <InputField/>
         </View>
+        <Text onPress={() => navigation.navigate('Forgot')}>
+          <Text  style={{ 
+            textDecorationLine: 'underline',
+            textAlign: 'center',
+            marginTop:30,
+            }}>
+            Forgot your password?
+          </Text>
+          
+        </Text>
 
         <View style ={{alignItems: 'center'}}>
-        <OnboardingButton label={'Sign Up'} onPress={() => {}} />
+        <OnboardingButton label={'Log In'} onPress={() => {}} />
         </View>
     </SafeAreaView>
   );
 };
 
-export default RegisterScreen;
+export default LoginScreen;
