@@ -1,19 +1,13 @@
 import React, {useState} from 'react';
 import {
   SafeAreaView,
-  ScrollView,
   View,
   Text,
-  TextInput,
-  TouchableOpacity,
   Image,
 } from 'react-native';
 
 import InputField from '../components/InputField';
 import OnboardingButton from '../components/OnboardingButton';
-
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-//import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const RegisterScreen = ({navigation}) => {
   return (
@@ -21,14 +15,13 @@ const RegisterScreen = ({navigation}) => {
       flex: 1, 
       justifyContent: 'center',
       backgroundColor: '#fff',
-      //alignItems: 'center',
       }}>
         <Image 
           style={{ 
-            width: 200, 
-            height: 50,
+            width: 235, 
+            height: 65,
             alignSelf: 'center',
-            marginBottom: 20,
+            marginBottom: 15,
           }}
           source={require("../assets/images/OnboardingStatusbar1.png")} />
         <Text
@@ -63,6 +56,7 @@ const RegisterScreen = ({navigation}) => {
             fontSize: 16,
             marginLeft: 29,
             textAlign: 'left',
+            marginTop: 3,
         }}> 
           Full Name <Text style={{color:'#FF0000'}}>*</Text>
         </Text>
@@ -77,6 +71,7 @@ const RegisterScreen = ({navigation}) => {
             color: '#333',
             marginLeft: 29,
             textAlign: 'left',
+            marginTop: 3,
         }}> 
           School Email <Text style={{color:'#FF0000'}}>*</Text>
         </Text>
@@ -91,16 +86,17 @@ const RegisterScreen = ({navigation}) => {
             color: '#333',
             marginLeft: 29,
             textAlign: 'left',
+            marginTop: 3,
         }}> 
           Password <Text style={{color:'#FF0000'}}>*</Text>
         </Text>
 
-        <View style={{alignItems: 'center'}} >
+        <View style={{alignItems: 'center', marginBottom: 30,}} >
         <InputField/>
         </View>
 
         <View style ={{alignItems: 'center'}}>
-        <OnboardingButton label={'Sign Up'} onPress={()=>navigation.navigate('ProfileSetup')} />
+        <OnboardingButton label={'Sign Up'} onPress={()=>navigation.navigate('Verification')} />
         </View>
     </SafeAreaView>
   );

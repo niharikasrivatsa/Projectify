@@ -1,19 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   SafeAreaView,
-  ScrollView,
   View,
   Text,
-  TextInput,
-  TouchableOpacity,
   Image,
 } from 'react-native';
 
-import InputField from '../components/InputField';
 import OnboardingButton from '../components/OnboardingButton';
-
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-//import Ionicons from 'react-native-vector-icons/Ionicons';
+import DropdownInput from '../components/DropdownInput';
 
 const ProfileSetupScreen = ({navigation}) => {
   return (
@@ -21,14 +15,13 @@ const ProfileSetupScreen = ({navigation}) => {
       flex: 1, 
       justifyContent: 'center',
       backgroundColor: '#fff',
-      //alignItems: 'center',
       }}>
         <Image 
           style={{ 
-            width: 200, 
-            height: 50,
+            width: 235, 
+            height: 60,
             alignSelf: 'center',
-            marginBottom: 20,
+            marginBottom: 30,
           }}
           source={require("../assets/images/OnboardingStatusbar3.png")} />
         <Text
@@ -64,7 +57,13 @@ const ProfileSetupScreen = ({navigation}) => {
           What grade are you in?
         </Text>
         <View style={{alignItems: 'center'}} >
-        <InputField/>
+        <DropdownInput 
+          data={[
+              '9',
+              '10',
+              '11',
+              '12'
+            ]}  />
         </View>
 
         <Text
@@ -78,7 +77,11 @@ const ProfileSetupScreen = ({navigation}) => {
           What are your pronouns? 
         </Text>
         <View style={{alignItems: 'center'}} >
-        <InputField/>
+        <DropdownInput 
+          data={[
+              'she/her',
+              'they/them',
+            ]}  />
         </View>
 
         <Text
@@ -92,11 +95,17 @@ const ProfileSetupScreen = ({navigation}) => {
           What city are you located? 
         </Text>
         <View style={{alignItems: 'center'}} >
-        <InputField/>
+        <DropdownInput 
+          data={[
+              'Brampton, ON',
+              'Burlington, ON',
+              'Toronto, ON',
+              'Waterloo, ON',
+            ]}  />
         </View>
 
-        <View style ={{alignItems: 'center'}}>
-        <OnboardingButton label={'Next'} onPress={() => {}} />
+        <View style ={{alignItems: 'center', marginTop: 70}}>
+        <OnboardingButton label={'Next'} onPress={()=>navigation.navigate('IntrestSkillSetup')} />
         </View>
     </SafeAreaView>
   );

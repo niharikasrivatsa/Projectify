@@ -1,5 +1,5 @@
 import React from 'react'
-import { SafeAreaView, View, Text, TouchableOpacity, Image } from 'react-native';
+import { SafeAreaView, View, Image } from 'react-native';
 
 import OnboardingButton from '../components/OnboardingButton';
 
@@ -7,7 +7,7 @@ const OnboardingScreen = ({navigation}) => {
   return (
     <SafeAreaView
       style={{
-        flex: '1',
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#fff',
