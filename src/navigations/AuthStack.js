@@ -4,6 +4,10 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import OnboardingScreen from '../screens/OnboardingScreen';
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
+import ForgotPwdScreen from '../screens/ForgotPwdScreen';
+import VerificationScreen from '../screens/VerficationScreen';
+import ProfileSetupScreen from '../screens/ProfileSetup';
+import IntrestSkillSetupScreen from '../screens/IntrestSkillsSetup';
 
 const Stack = createNativeStackNavigator();
 
