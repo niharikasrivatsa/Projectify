@@ -105,7 +105,7 @@ const ProfileSetupScreen = ({navigation}) => {
         </View>
 
         <View style ={{alignItems: 'center', marginTop: 70}}>
-        <OnboardingButton label={'Next'} onPress={()=>navigation.navigate('IntrestSkillSetup')} />
+        <OnboardingButton label={'Next'} onPress={()=>navigation.navigate('InterestSkillsSetup')} />
         </View>
     </SafeAreaView>
   );

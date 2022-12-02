@@ -11,7 +11,7 @@ export default function ProfileScreen ({navigation}) {
         alignItems: 'center',
         backgroundColor: '#F4F6F9',
       }}>
-      <Text>Profile Screen</Text>
+      <Text>Profile Screen. All about you </Text>
     </SafeAreaView>
   );
 };

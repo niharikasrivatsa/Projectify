@@ -7,7 +7,7 @@ import RegisterScreen from '../screens/RegisterScreen';
 import ForgotPwdScreen from '../screens/ForgotPwdScreen';
 import VerificationScreen from '../screens/VerficationScreen';
 import ProfileSetupScreen from '../screens/ProfileSetup';
-import IntrestSkillSetupScreen from '../screens/IntrestSkillsSetup';
+import InterestSkillsSetupScreen from '../screens/InterestSkillsSetup';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +20,7 @@ function AuthStack() {
       <Stack.Screen name="Register" component={RegisterScreen} />
       <Stack.Screen name="Verification" component={VerificationScreen} />
       <Stack.Screen name="ProfileSetup" component={ProfileSetupScreen} />
-      <Stack.Screen name="IntrestSkillSetup" component={IntrestSkillSetupScreen} />
+      <Stack.Screen name="InterestSkillsSetup" component={InterestSkillsSetupScreen} />
     </Stack.Navigator>
   );
 };

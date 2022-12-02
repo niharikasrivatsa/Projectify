@@ -12,7 +12,7 @@ export default function ExploreScreen ({navigation}) {
         alignItems: 'center',
         backgroundColor: '#F4F6F9',
       }}>
-      <Text>Explore Screen</Text>
+      <Text style={{textAlign:'center'}}>Explore Screen. Feel free to explore projects here!</Text>
     </SafeAreaView>
   );
 };

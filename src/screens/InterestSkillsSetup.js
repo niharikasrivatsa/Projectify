@@ -6,11 +6,11 @@ import {
 } from 'react-native';
 
 import OnboardingButton from '../components/OnboardingButton';
-import IntrestButtons from '../components/MultiSelectIntrests';
+import InterestButtons from '../components/MultiSelectInterests';
 import SkillsButtons from '../components/MultiSelectSkills';
 import AppStack from '../navigations/AppStack';
 
-const IntrestSkillSetupScreen = ({navigation}) => {
+const InterestSkillsSetupScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{
       flex: 1, 
@@ -73,7 +73,7 @@ const IntrestSkillSetupScreen = ({navigation}) => {
               }}>
                 Interests 
               </Text>
-            <IntrestButtons />
+            <InterestButtons />
             </View>
 
             <View style={{marginLeft:30, marginRight: 10, marginTop: 25}}>
@@ -106,4 +106,4 @@ const IntrestSkillSetupScreen = ({navigation}) => {
   );
 };
 
-export default IntrestSkillSetupScreen;
+export default InterestSkillsSetupScreen;

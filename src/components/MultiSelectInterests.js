@@ -8,7 +8,7 @@ import {SelectMultipleButton} from "react-native-selectmultiple-button";
 
 const multipleData = ["Healthcare", "Engineering", "UX/UI", "AI/ML", "PM", "Aerospace", "Math", "Cybersecurity"];
 
-export default class IntrestButtons extends Component {
+export default class InterestButtons extends Component {
   constructor(props) {
     super(props);
 

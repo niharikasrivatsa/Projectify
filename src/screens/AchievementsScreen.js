@@ -10,7 +10,7 @@ export default function AccomplishmentsScreen ({navigation}) {
         alignItems: 'center',
         backgroundColor: '#F4F6F9',
       }}>
-      <Text>Achievements Screen</Text>
+      <Text>Achievements Screen!!! Put achievements here </Text>
     </SafeAreaView>
   );
 };
