@@ -64,25 +64,25 @@ const LoginScreen = ({navigation}) => {
         </View>
 
         <View style={{marginBottom: 70}}>
-          <Text onPress={() => navigation.navigate('Forgot')}>
-          <Text  style={{ 
+          
+          <Text  onPress={() => navigation.navigate('Forgot')} style={{ 
             fontFamily: 'Nunito_400Regular',
+            textDecorationLine: 'underline',
             fontSize: 16,
             textAlign: 'center',
             }}>
             Forgot your password?
-          </Text>
+         
           </Text>
         </View>
 
-        <Text onPress={() => navigation.navigate('Register')}>
-          <Text  style={{ 
+          <Text  onPress={() => navigation.navigate('Register')} style={{ 
             fontFamily: 'Nunito_400Regular',
             fontSize: 16,
             textAlign: 'center',
             }}>
-            Don’t have an account? <Text style ={{color:'#FA8C47'}}>Join</Text>
-          </Text>
+            Don’t have an account? <Text style ={{color:'#FA8C47',textDecorationLine: 'underline'}}>Join</Text>
+          
           </Text>
           
     </SafeAreaView>
