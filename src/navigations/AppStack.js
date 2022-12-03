@@ -55,6 +55,7 @@ const AppStack = () => {
           tabBarIcon: ({color, size}) => (
             <Ionicons name="star-outline" color={color} size={size} />
           ),
+          tabBarActiveTintColor: '#7250CA',
           tabBarIconStyle: {marginTop:9}
         }}
       />
@@ -68,6 +69,7 @@ const AppStack = () => {
           tabBarIcon: ({color, size}) => (
             <Ionicons name="search" color={color} size={size} />
           ),
+          tabBarActiveTintColor: '#7250CA',
           tabBarIconStyle: {marginTop:9}
         }}
       />
@@ -79,6 +81,7 @@ const AppStack = () => {
           tabBarIcon: ({color, size}) => (
             <Ionicons name="person" color={color} size={size} />
           ),
+          tabBarActiveTintColor: '#7250CA',
           tabBarIconStyle: {marginTop:9}
         }}
       />
