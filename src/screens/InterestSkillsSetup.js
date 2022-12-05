@@ -6,9 +6,11 @@ import {
 } from 'react-native';
 
 import OnboardingButton from '../components/OnboardingButton';
-import InterestButtons from '../components/MultiSelectInterests';
-import SkillsButtons from '../components/MultiSelectSkills';
+import OnboardingMultiSelect from '../components/OnboardingMultiSelect';
 import AppStack from '../navigations/AppStack';
+
+const InterestData = ["Healthcare", "Engineering", "UX/UI", "AI/ML", "PM", "Aerospace", "Math", "Cybersecurity"];
+const SkillData = ["Figma", "Canva", "Java", "Python", "C++", "HTML/CSS", "React", "Springboot", "MatLab", "Linux", "Frontend", "Backend", "Kotlin", "C"];
 
 const InterestSkillsSetupScreen = ({navigation}) => {
   return (
@@ -73,7 +75,8 @@ const InterestSkillsSetupScreen = ({navigation}) => {
               }}>
                 Interests 
               </Text>
-            <InterestButtons />
+            <OnboardingMultiSelect
+            data={InterestData}/>
             </View>
 
             <View style={{marginLeft:30, marginRight: 10, marginTop: 25}}>
@@ -85,7 +88,8 @@ const InterestSkillsSetupScreen = ({navigation}) => {
               }}>
                 Skills 
               </Text>
-            < SkillsButtons/>
+              <OnboardingMultiSelect
+            data={SkillData}/>
             </View>
 
           <View style ={{alignItems: 'center', marginTop: 30}}>

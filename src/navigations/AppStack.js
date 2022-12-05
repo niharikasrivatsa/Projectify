@@ -13,30 +13,22 @@ import Feather from 'react-native-vector-icons/Feather';
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-// const HomeStack = () => {
-//   return (
-//     <Stack.Navigator>
-//       <Stack.Screen
-//         name="Accomplishmnents"
-//         component={AccomplishmentsScreen}
-//         options={{headerShown: false}}
-//       />
-//       <Stack.Screen
-//         name="Explore"
-//         component={ExploreScreen}
-//         options={({route}) => ({
-//           title: route.params?.title,
-//         })}
-//       />
-//     </Stack.Navigator>
-//   );
-// };
-
 const AppStack = () => {
   return (
     <Tab.Navigator
       screenOptions={{
         headerShown: true,
+        headerStyle: {
+          backgroundColor: '#F4F6F9',
+          elevation: 0,
+          shadowOpacity: 0,
+          borderBottomWidth: 0,
+        },
+        headerTitleStyle: {
+          fontFamily: 'Nunito_700Bold',
+          fontSize: 18,
+          padding: 15,
+        },
         tabBarShowLabel: true,
         tabBarStyle: {backgroundColor: '#FFF'},
         tabBarInactiveTintColor: 'grey',
@@ -47,10 +39,6 @@ const AppStack = () => {
         name="Achievements"
         component={AchievementsScreen}
         options={{
-          // tabBarStyle: {
-          //   //display: getTabBarVisibility(route),
-          //   backgroundColor: '#FFF',
-          // },
           tabBarLabelStyle: {fontFamily: 'Nunito_400Regular', fontSize: 13},
           tabBarIcon: ({color, size}) => (
             <Ionicons name="star-outline" color={color} size={size} />
@@ -63,8 +51,6 @@ const AppStack = () => {
         name="Explore"
         component={ExploreScreen}
         options={{
-          // tabBarBadge: 3,
-          // tabBarBadgeStyle: {backgroundColor: 'yellow'},
           tabBarLabelStyle: {fontFamily: 'Nunito_400Regular', fontSize: 13},
           tabBarIcon: ({color, size}) => (
             <Ionicons name="search" color={color} size={size} />
@@ -88,16 +74,5 @@ const AppStack = () => {
     </Tab.Navigator>
   );
 };
-
-// const getTabBarVisibility = route => {
-//   // console.log(route);
-//   const routeName = getFocusedRouteNameFromRoute(route) ?? 'Feed';
-//   // console.log(routeName);
-
-//   if( routeName == 'GameDetails' ) {
-//     return 'none';
-//   }
-//   return 'flex';
-// };
 
 export default AppStack;

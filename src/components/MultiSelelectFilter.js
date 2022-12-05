@@ -6,14 +6,13 @@ import { View, Text, StyleSheet } from "react-native";
 import _ from "lodash";
 import {SelectMultipleButton} from "react-native-selectmultiple-button";
 
-const multipleData = ["Healthcare", "Engineering", "UX/UI", "AI/ML", "PM", "Aerospace", "Math", "Cybersecurity"];
-
-export default class InterestButtons extends Component {
-  constructor(props) {
-    super(props);
+export default class FilterButtons extends Component{
+  constructor(data) {
+    super(data);
 
     this.state = {
-      multipleSelectedData: [],
+      multipleSelectedData: ["Recent"],
+      multipleData: data["options"]
     };
   }
 
@@ -27,24 +26,26 @@ export default class InterestButtons extends Component {
           style={{
             flexWrap: "wrap",
             flexDirection: "row",
+            //justifyContent: "center"
           }}>
-          {multipleData.map(interest => (
+          {this.state.multipleData.map(interest => (
             <SelectMultipleButton
               key={interest}
               buttonViewStyle={{
                 borderRadius: 7,
-                height: 30
+                height: 28,
               }}
               textStyle={{
-                fontSize: 13
+                fontSize: 12,
+                fontFamily:"Nunito_400Regular"
               }}
               highLightStyle={{
-                borderColor: "#7250CA",
-                backgroundColor: "rgba(114, 80, 202, 0.3)",
-                textColor: "#7250CA",
+                borderColor: "#2C2C2C",
+                backgroundColor: "#F4F6F9",
+                textColor: "#2C2C2C",
                 borderTintColor: "#7250CA",
-                backgroundTintColor: "#7250CA",
-                textTintColor: "#D1C1F2"
+                backgroundTintColor: "rgba(114, 80, 202, 0.3)",
+                textTintColor: "#7250CA"
               }}
               value={interest}
               selected={this.state.multipleSelectedData.includes(interest)}

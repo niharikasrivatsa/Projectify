@@ -6,14 +6,14 @@ import { View, Text, StyleSheet } from "react-native";
 import _ from "lodash";
 import {SelectMultipleButton} from "react-native-selectmultiple-button";
 
-const multipleData = ["Figma", "Canva", "Java", "Python", "C++", "HTML/CSS", "React", "Springboot", "MatLab", "Linux", "Frontend", "Backend", "Kotlin", "C"];
 
-export default class SkillsButtons extends Component {
-  constructor(props) {
-    super(props);
+export default class OnboardingMultiSelect extends Component {
+  constructor(data) {
+    super(data);
 
     this.state = {
       multipleSelectedData: [],
+      multipleData: data["data"]
     };
   }
 
@@ -27,10 +27,8 @@ export default class SkillsButtons extends Component {
           style={{
             flexWrap: "wrap",
             flexDirection: "row",
-            //justifyContent: "center"
-          }}
-        >
-          {multipleData.map(interest => (
+          }}>
+          {this.state.multipleData.map(interest => (
             <SelectMultipleButton
               key={interest}
               buttonViewStyle={{
@@ -38,7 +36,8 @@ export default class SkillsButtons extends Component {
                 height: 30
               }}
               textStyle={{
-                fontSize: 13
+                fontSize: 13,
+                fontFamily:"Nunito_400Regular"
               }}
               highLightStyle={{
                 borderColor: "#7250CA",
