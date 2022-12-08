@@ -23,7 +23,11 @@ export default class BadgeCard extends Component {
           }}
         >
           <Text></Text>
-          {this.state.new && <Text style={styles.flag}>New</Text>}
+          {this.state.new && (
+            <View style={styles.flag}>
+              <Text style={styles.flagText}>New</Text>
+            </View>
+          )}
         </View>
 
         <View style={styles.cardContent}>
@@ -50,7 +54,7 @@ const styles = StyleSheet.create({
     width: 46,
   },
   card: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderRadius: 10,
     paddingVertical: 10,
     marginRight: 10,
@@ -59,8 +63,8 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   shadowProp: {
-    shadowColor: 'rgba(0, 0, 0, 0.25)',
-    shadowOffset: {width: -2, height: 4},
+    shadowColor: "rgba(0, 0, 0, 0.25)",
+    shadowOffset: { width: -2, height: 4 },
     shadowOpacity: 0.2,
     shadowRadius: 3,
   },
@@ -76,10 +80,18 @@ const styles = StyleSheet.create({
     width: 90,
     textAlign: "center",
   },
+  flagText: {
+    fontFamily: "Nunito_700Bold",
+    fontSize: 10,
+    color: "white",
+  },
   flag: {
     marginRight: 10,
-    fontFamily: "Nunito_700Bold",
-    fontSize: 11,
-    color: "#2C2C2C",
+    backgroundColor: "#7250CA",
+    borderRadius: 5,
+    paddingVertical: 1,
+    paddingHorizontal: 7,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
