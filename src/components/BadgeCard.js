@@ -15,7 +15,7 @@ export default class BadgeCard extends Component {
 
   render() {
     return (
-      <View style={styles.card}>
+      <View style={[styles.card, styles.shadowProp]}>
         <View
           style={{
             justifyContent: "space-between",
@@ -46,19 +46,23 @@ const badgeImageURLs = {
 };
 const styles = StyleSheet.create({
   image: {
-    height: 70,
+    height: 69,
     width: 46,
   },
   card: {
+    backgroundColor: 'white',
+    borderRadius: 10,
+    paddingVertical: 10,
+    marginRight: 10,
     width: 129,
     height: 145,
-    backgroundColor: "white",
-    borderRadius: 10,
-    marginRight: 10,
-    paddingTop: 10,
-    marginTop: 10,
-    // paddingRight: 10,
-    // add drop shadow
+    marginVertical: 10,
+  },
+  shadowProp: {
+    shadowColor: 'rgba(0, 0, 0, 0.25)',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
   },
   cardContent: {
     justifyContent: "center",
@@ -73,7 +77,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   flag: {
-    // marginTop: 10,
     marginRight: 10,
     fontFamily: "Nunito_700Bold",
     fontSize: 11,
