@@ -47,7 +47,7 @@ const badgeImageURLs = {
 const styles = StyleSheet.create({
   image: {
     height: 70,
-    width: 45,
+    width: 46,
   },
   card: {
     width: 129,
@@ -56,7 +56,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginRight: 10,
     paddingTop: 10,
-    paddingRight: 10,
+    marginTop: 10,
+    // paddingRight: 10,
+    // add drop shadow
   },
   cardContent: {
     justifyContent: "center",
@@ -72,7 +74,7 @@ const styles = StyleSheet.create({
   },
   flag: {
     // marginTop: 10,
-    // marginRight: 10,
+    marginRight: 10,
     fontFamily: "Nunito_700Bold",
     fontSize: 11,
     color: "#2C2C2C",
