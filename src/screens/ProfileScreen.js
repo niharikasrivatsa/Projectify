@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { SelectMultipleButton } from "react-native-selectmultiple-button";
+import BadgeCard from "../components/BadgeCard";
 
 export default class ProfileScreen extends React.Component {
   // need to understand how the components work
@@ -137,7 +138,7 @@ export default class ProfileScreen extends React.Component {
               style={{
                 fontFamily: "Nunito_700Bold",
                 fontSize: 20,
-                lineHeight: 27,
+                // lineHeight: 27,
                 color: "#2C2C2C",
               }}
             >
@@ -153,10 +154,12 @@ export default class ProfileScreen extends React.Component {
               View all (12)
             </Text>
           </View>
+        </View>
+        <View>
           <ScrollView
             horizontal={true}
             showsHorizontalScrollIndicator={false}
-            style={{ marginTop: 5, flexDirection: "row" }}
+            style={{ marginTop: 5, flexDirection: "row", paddingLeft: 30 }}
           >
             {this.state.toolbox.map((skill) => (
               <SelectMultipleButton
@@ -171,39 +174,42 @@ export default class ProfileScreen extends React.Component {
               />
             ))}
           </ScrollView>
+        </View>
 
-          <View
+        <View
+          style={{
+            marginTop: 20,
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            marginLeft: 30,
+            marginRight: 30,
+          }}
+        >
+          <Text
             style={{
-              marginTop: 20,
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "space-between",
+              fontFamily: "Nunito_700Bold",
+              fontSize: 20,
+              color: "#2C2C2C",
             }}
           >
-            <Text
-              style={{
-                fontFamily: "Nunito_700Bold",
-                fontSize: 20,
-                lineHeight: 27,
-                color: "#2C2C2C",
-              }}
-            >
-              Interests
-            </Text>
-            <Text
-              style={{
-                color: "#928F8F",
-                fontFamily: "Nunito_700Bold",
-                fontSize: 12,
-              }}
-            >
-              View all (6)
-            </Text>
-          </View>
+            Interests
+          </Text>
+          <Text
+            style={{
+              color: "#928F8F",
+              fontFamily: "Nunito_700Bold",
+              fontSize: 12,
+            }}
+          >
+            View all (6)
+          </Text>
+        </View>
+        <View>
           <ScrollView
             horizontal={true}
             showsHorizontalScrollIndicator={false}
-            style={{ marginTop: 5, flexDirection: "row" }}
+            style={{ marginTop: 5, flexDirection: "row", paddingLeft: 30 }}
           >
             {this.state.interests.map((interest) => (
               <SelectMultipleButton
@@ -218,35 +224,67 @@ export default class ProfileScreen extends React.Component {
               />
             ))}
           </ScrollView>
-          <View
+        </View>
+        <View
+          style={{
+            marginTop: 20,
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            marginRight: 30,
+            marginLeft: 30,
+          }}
+        >
+          <Text
             style={{
-              marginTop: 20,
-              flexDirection: "row",
-              alignItems: "center",
-              justifyContent: "space-between",
+              fontFamily: "Nunito_700Bold",
+              fontSize: 20,
+              lineHeight: 27,
+              color: "#2C2C2C",
             }}
           >
-            <Text
-              style={{
-                fontFamily: "Nunito_700Bold",
-                fontSize: 20,
-                lineHeight: 27,
-                color: "#2C2C2C",
-              }}
-            >
-              Badges
-            </Text>
-            <Text
-              style={{
-                color: "#928F8F",
-                fontFamily: "Nunito_700Bold",
-                fontSize: 12,
-              }}
-            >
-              View all (4)
-            </Text>
-          </View>
+            Badges
+          </Text>
+          <Text
+            style={{
+              color: "#928F8F",
+              fontFamily: "Nunito_700Bold",
+              fontSize: 12,
+            }}
+          >
+            View all (4)
+          </Text>
         </View>
+        <View>
+          <ScrollView
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            style={{ marginTop: 5, flexDirection: "row", paddingLeft: 30 }}
+          >
+            <BadgeCard
+              title={"First Python Project"}
+              tool={"python"}
+              new={true}
+            ></BadgeCard>
+            <BadgeCard
+              title={"Collaborated on Figma"}
+              tool={"python"}
+              new={true}
+            ></BadgeCard>
+            <BadgeCard
+              title={"10 Figma Projects"}
+              tool={"python"}
+              new={false}
+            ></BadgeCard>
+            <BadgeCard
+              title={"First GitHub Repo"}
+              tool={"python"}
+              new={false}
+            ></BadgeCard>
+          </ScrollView>
+        </View>
+
+        <View style={{ marginRight: 30, marginLeft: 30 }}></View>
       </SafeAreaView>
     );
   }
