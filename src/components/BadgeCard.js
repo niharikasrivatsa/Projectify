@@ -60,12 +60,13 @@ const styles = StyleSheet.create({
     marginRight: 10,
     width: 129,
     height: 145,
-    marginVertical: 10,
+    marginTop: 5, // play around with this value, the spacing looks off
+    marginBottom: 10,
   },
   shadowProp: {
     shadowColor: "rgba(0, 0, 0, 0.25)",
     shadowOffset: { width: -2, height: 4 },
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.3,
     shadowRadius: 3,
   },
   cardContent: {
@@ -77,8 +78,9 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: "#2C2C2C",
     marginTop: 14,
-    width: 90,
+    width: 80,
     textAlign: "center",
+    lineHeight: 15,
   },
   flagText: {
     fontFamily: "Nunito_700Bold",
