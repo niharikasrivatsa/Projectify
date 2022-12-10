@@ -8,14 +8,20 @@ import {
 
 import InputField from '../components/InputField';
 import OnboardingButton from '../components/OnboardingButton';
+import OnboardingBackButton from '../components/onboardingBackButton';
 
 const RegisterScreen = ({navigation}) => {
   return (
+    
     <SafeAreaView style={{
       flex: 1, 
       justifyContent: 'center',
-      backgroundColor: '#fff',
+      backgroundColor: '#F4F6F9',
       }}>
+        <View style={{alignItems: 'flex-start'}} >
+        <OnboardingBackButton onPress={()=>navigation.navigate('Login')}/>
+        </View>
+         
         <Image 
           style={{ 
             width: 235, 

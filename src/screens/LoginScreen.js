@@ -11,6 +11,7 @@ import {
 
 import InputField from '../components/InputField';
 import OnboardingButton from '../components/OnboardingButton';
+import PwdInput from '../components/PwdInput';
 
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 //import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -20,18 +21,19 @@ const LoginScreen = ({navigation}) => {
     <SafeAreaView style={{
       flex: 1, 
       justifyContent: 'center',
-      backgroundColor: '#fff',
+      backgroundColor: '#F4F6F9',
       //alignItems: 'center',
       }}>
+       
         <Image 
           style={{ 
-            width: 320, 
-            height: 320,
+            width: 300, 
+            height: 300,
             alignSelf: 'center',
             marginTop: 5,
           }}
-          source={require("../assets/images/ProjectifyIcon.png")} />
-        
+          source={require("../assets/images/ProjectifyLogo.png")} />
+      
       <Text
           style={{
             fontFamily: 'Nunito_400Regular',
@@ -56,32 +58,33 @@ const LoginScreen = ({navigation}) => {
           Password <Text style={{color:'#FF0000'}}>*</Text>
         </Text>
         <View style={{alignItems: 'center'}} >
-        <InputField/>
+        <PwdInput/>
         </View>
 
-        <View style ={{alignItems: 'center', marginBottom: 18}}>
-        <OnboardingButton label={'Log In'} onPress={()=>navigation.navigate('Register')} />
-        </View>
-
-        <View style={{marginBottom: 70}}>
+        <View style={{marginBottom: 0}}>
           
           <Text  onPress={() => navigation.navigate('Forgot')} style={{ 
             fontFamily: 'Nunito_400Regular',
             textDecorationLine: 'underline',
             fontSize: 16,
-            textAlign: 'center',
+            textAlign: 'right',
+            marginRight: 35,
             }}>
             Forgot your password?
-         
           </Text>
         </View>
 
-          <Text  onPress={() => navigation.navigate('Register')} style={{ 
+        <View style ={{alignItems: 'center', marginBottom: 25}}>
+        <OnboardingButton label={'Log In'} onPress={()=>navigation.navigate('Register')} />
+        
+        </View>
+
+          <Text  style={{ 
             fontFamily: 'Nunito_400Regular',
             fontSize: 16,
             textAlign: 'center',
             }}>
-            Don’t have an account? <Text style ={{color:'#FA8C47',textDecorationLine: 'underline'}}>Join</Text>
+            Don’t have an account? <Text onPress={() => navigation.navigate('Register')}style ={{color:'#FA8C47',textDecorationLine: 'underline',}}>Join</Text>
           
           </Text>
           

@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 
 import OnboardingButton from '../components/OnboardingButton';
+import OnboardingBackButton from '../components/onboardingBackButton';
 
 
 const VerificationScreen = ({navigation}) => {
@@ -14,8 +15,11 @@ const VerificationScreen = ({navigation}) => {
     <SafeAreaView style={{
       flex: 1, 
       justifyContent: 'center',
-      backgroundColor: '#fff',
+      backgroundColor: '#F4F6F9',
       }}>
+        <View style={{alignItems: 'flex-start'}} >
+        <OnboardingBackButton onPress={()=>navigation.navigate('Register')}/>
+        </View>
         <Image 
           style={{ 
             width: 235, 
@@ -24,6 +28,14 @@ const VerificationScreen = ({navigation}) => {
             marginBottom: 50,
           }}
           source={require("../assets/images/OnboardingStatusbar2.png")} />
+          <Image 
+          style={{ 
+            width: 200, 
+            height: 200,
+            alignSelf: 'center',
+            marginBottom: 45,
+          }}
+          source={require("../assets/images/VerifyIcon.png")} />
         <Text
           style={{
             fontFamily: 'Nunito_700Bold',
@@ -31,7 +43,7 @@ const VerificationScreen = ({navigation}) => {
             color: '#333',
             marginHorizontal: 30,
             textAlign: 'center',
-            marginBottom: 30,
+            marginBottom: 20,
           }}>
           Verification
         </Text>
@@ -43,20 +55,14 @@ const VerificationScreen = ({navigation}) => {
             color: '#737171',
             marginHorizontal: 30,
             textAlign: 'center',
-            marginBottom: 50,
+            marginBottom: 0,
         }}>
             We sent a verification link to your student email to help verify your account!
         </Text>
 
-        <Image 
-          style={{ 
-            width: 220, 
-            height: 220,
-            alignSelf: 'center',
-            marginBottom: 45,
-          }}
-          source={require("../assets/images/Verify.png")} />
-
+        <View style ={{alignItems: 'center', marginBottom:30}}>
+        <OnboardingButton label={'Verify'} onPress={()=>navigation.navigate('ProfileSetup')} />
+        </View>
         <Text
             style={{
                 fontFamily: 'Nunito_400Regular',
@@ -71,11 +77,6 @@ const VerificationScreen = ({navigation}) => {
                 fontFamily: 'Nunito_700Bold'
             }}>Resend Again</Text>
         </Text>
-
-    
-        <View style ={{alignItems: 'center'}}>
-        <OnboardingButton label={'Verify'} onPress={()=>navigation.navigate('ProfileSetup')} />
-        </View>
     </SafeAreaView>
   );
 };
