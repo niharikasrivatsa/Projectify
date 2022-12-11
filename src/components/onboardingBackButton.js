@@ -9,7 +9,7 @@ export default function OnboardingBackButton({label, onPress}) {
           onPress={onPress}
           style={{
             backgroundColor: "#FFF",
-            position:'absloute',
+            position:'static',
             marginLeft: 25,
             marginTop: 20,
             marginBottom: 25,
