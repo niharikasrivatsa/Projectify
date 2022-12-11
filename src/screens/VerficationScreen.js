@@ -1,84 +1,122 @@
-import React from 'react';
+import React, { useState }  from "react";
 import {
   SafeAreaView,
   View,
   Text,
   Image,
-} from 'react-native';
+  KeyboardAvoidingView,
+  StyleSheet
+} from "react-native";
 
-import OnboardingButton from '../components/OnboardingButton';
-import OnboardingBackButton from '../components/onboardingBackButton';
+import OnboardingButton from "../components/OnboardingButton";
+import OnboardingBackButton from "../components/onboardingBackButton";
+import InputField from "../components/InputField";
 
+const VerificationScreen = ({ navigation }) => {
+  const [code, setCode] = useState('');
 
-const VerificationScreen = ({navigation}) => {
+  const handleVerify = () => {
+    navigation.navigate("ProfileSetup")
+    console.log("Verify");
+  };
+
+  const handleResend = () => {
+    console.log("Resend");
+  };
+
+  const onBackButtonPressed = () => {
+    navigation.navigate("Register")
+  };
+
   return (
-    <SafeAreaView style={{
-      flex: 1, 
-      justifyContent: 'center',
-      backgroundColor: '#F4F6F9',
-      }}>
-        <View style={{alignItems: 'flex-start'}} >
-        <OnboardingBackButton onPress={()=>navigation.navigate('Register')}/>
+    <KeyboardAvoidingView behavior="padding" style={styles.container}>
+      <SafeAreaView>
+        <View style={{ alignItems: "flex-start" }}>
+          <OnboardingBackButton
+            onPress={onBackButtonPressed}
+          />
         </View>
-        <Image 
-          style={{ 
-            width: 235, 
-            height: 65,
-            alignSelf: 'center',
-            marginBottom: 50,
-          }}
-          source={require("../assets/images/OnboardingStatusbar2.png")} />
-          <Image 
-          style={{ 
-            width: 200, 
-            height: 200,
-            alignSelf: 'center',
-            marginBottom: 45,
-          }}
-          source={require("../assets/images/VerifyIcon.png")} />
-        <Text
-          style={{
-            fontFamily: 'Nunito_700Bold',
-            fontSize: 36,
-            color: '#333',
-            marginHorizontal: 30,
-            textAlign: 'center',
-            marginBottom: 20,
-          }}>
-          Verification
+        <Image
+          style={styles.statusbar}
+          source={require("../assets/images/OnboardingStatusbar2.png")}
+        />
+        <Image
+          style={styles.verifyIcon}
+          source={require("../assets/images/VerifyIcon.png")}
+        />
+        <Text style={styles.title}>Verification</Text>
+
+        <Text style={styles.text}>
+        We sent a verification code to your student email to help verify your account!
         </Text>
 
-        <Text
-        style={{
-            fontFamily: 'Nunito_400Regular',
-            fontSize: 16,
-            color: '#737171',
-            marginHorizontal: 30,
-            textAlign: 'center',
-            marginBottom: 0,
-        }}>
-            We sent a verification link to your student email to help verify your account!
-        </Text>
-
-        <View style ={{alignItems: 'center', marginBottom:30}}>
-        <OnboardingButton label={'Verify'} onPress={()=>navigation.navigate('ProfileSetup')} />
+        <View style={{alignItems: 'center', marginBottom: 85}} >
+        <InputField
+        value={code}
+        setValue={setCode}
+        />
         </View>
-        <Text
+
+        <View style={{ alignItems: "center", marginBottom: 15 }}>
+          <OnboardingButton
+            label={"Verify"}
+            onPress={handleVerify}
+          />
+        </View>
+        <Text style={styles.resendLink}>
+          Didn’t recieve link?{" "}
+          <Text
             style={{
-                fontFamily: 'Nunito_400Regular',
-                fontSize: 14,
-                color: '#737171',
-                marginHorizontal: 30,
-                textAlign: 'center',
-            }}>
-            Didn’t recieve link? <Text 
-            style ={{
-                color:'#FA8C47', 
-                fontFamily: 'Nunito_700Bold'
-            }}>Resend Again</Text>
+              color: "#FA8C47",
+              fontFamily: "Nunito_700Bold",
+            }}
+            onPress={handleResend}
+          >
+            Resend Again
+          </Text>
         </Text>
-    </SafeAreaView>
+      </SafeAreaView>
+    </KeyboardAvoidingView>
   );
 };
 
 export default VerificationScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: "center",
+    backgroundColor: "#F4F6F9",
+  },
+  statusbar: {
+    width: 235,
+    height: 65,
+    alignSelf: "center"
+  },
+  verifyIcon: {
+    width: 180,
+    height: 180,
+    alignSelf: "center",
+  },
+  title: {
+    fontFamily: "Nunito_700Bold",
+    fontSize: 36,
+    color: "#333",
+    textAlign: "center",
+    marginBottom: 20,
+  },
+  text: {
+    fontFamily: "Nunito_400Regular",
+    fontSize: 16,
+    color: "#737171",
+    marginHorizontal: 30,
+    textAlign: "center",
+    marginBottom: 35,
+  },
+  resendLink: {
+    fontFamily: "Nunito_400Regular",
+    fontSize: 14,
+    color: "#737171",
+    marginHorizontal: 30,
+    textAlign: "center",
+  },
+});

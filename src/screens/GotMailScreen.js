@@ -14,13 +14,10 @@ import OnboardingBackButton from '../components/onboardingBackButton';
 const GotMailScreen = ({navigation}) => {
     return (
       <SafeAreaView style={{
-            flex: 1, 
             justifyContent: 'center',
             backgroundColor: '#F4F6F9',
         }}>
-        <View style={{}} >
         <OnboardingBackButton onPress={()=>navigation.navigate('Forgot')}/>
-        </View>
        
         <Image 
           style={{ 

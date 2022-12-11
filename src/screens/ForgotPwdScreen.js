@@ -15,14 +15,11 @@ import InputField from '../components/InputField';
 const ForgotPwdScreen = ({navigation}) => {
     return (
       <SafeAreaView style={{
-            flex: 1, 
             justifyContent: 'center',
             backgroundColor: '#F4F6F9',
         }}>
         
-        <View style={{}} >
         <OnboardingBackButton onPress={()=>navigation.navigate('Login')}/>
-        </View>
         
         <Text
           style={{

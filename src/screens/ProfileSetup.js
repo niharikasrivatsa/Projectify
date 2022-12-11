@@ -13,13 +13,10 @@ import OnboardingBackButton from '../components/onboardingBackButton';
 const ProfileSetupScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{
-      flex: 1, 
       justifyContent: 'center',
       backgroundColor: '#F4F6F9',
       }}>
-        <View style={{alignItems: 'flex-start'}} >
         <OnboardingBackButton onPress={()=>navigation.navigate('Verification')}/>
-        </View>
         <Image 
           style={{ 
             width: 235, 

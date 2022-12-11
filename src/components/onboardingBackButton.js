@@ -8,15 +8,15 @@ export default function OnboardingBackButton({label, onPress}) {
         <TouchableOpacity
           onPress={onPress}
           style={{
-            backgroundColor: '#FFF',
-            position:'static',
-            left: 5,
-            top:0,
-            marginLeft: 15,
-            width: 50,
-            height: 50,
+            backgroundColor: "#FFF",
+            position:'absloute',
+            marginLeft: 25,
+            marginTop: 20,
+            marginBottom: 30,
+            width: 44,
+            height: 44,
             borderRadius: 100,
-            borderWidth: 4,
+            borderWidth: 2,
             borderColour: '#000',
           }}>
         
