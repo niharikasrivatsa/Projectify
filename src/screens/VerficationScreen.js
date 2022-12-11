@@ -1,40 +1,62 @@
-import React, { useState }  from "react";
+import React from "react";
 import {
   SafeAreaView,
   View,
   Text,
   Image,
   KeyboardAvoidingView,
-  StyleSheet
+  StyleSheet,
+  Alert,
 } from "react-native";
 
 import OnboardingButton from "../components/OnboardingButton";
 import OnboardingBackButton from "../components/onboardingBackButton";
 import InputField from "../components/InputField";
+import { useForm } from "react-hook-form";
+import { useRoute } from "@react-navigation/native";
+import { Auth } from "aws-amplify";
 
 const VerificationScreen = ({ navigation }) => {
-  const [code, setCode] = useState('');
+  const route = useRoute();
+  const {
+    control,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm({
+    defaultValues: { username: route?.params?.username },
+  });
 
-  const handleVerify = () => {
-    navigation.navigate("ProfileSetup")
-    console.log("Verify");
+  const username = watch("username");
+
+  const handleVerify = async (data) => {
+    try {
+      await Auth.confirmSignUp(data.username, data.code);
+      navigation.navigate("ProfileSetup");
+    } catch (e) {
+      Alert.alert("Oops", e.message);
+    }
   };
 
-  const handleResend = () => {
-    console.log("Resend");
+  const handleResend = async () => {
+    try {
+      await Auth.resendSignUp(username);
+      //IDK if we need to include it
+      Alert.alert("Success", "Code was resent to your email");
+    } catch (e) {
+      Alert.alert("Oops", e.message);
+    }
   };
 
   const onBackButtonPressed = () => {
-    navigation.navigate("Register")
+    navigation.navigate("Register");
   };
 
   return (
     <KeyboardAvoidingView behavior="padding" style={styles.container}>
       <SafeAreaView>
         <View style={{ alignItems: "flex-start" }}>
-          <OnboardingBackButton
-            onPress={onBackButtonPressed}
-          />
+          <OnboardingBackButton onPress={onBackButtonPressed} />
         </View>
         <Image
           style={styles.statusbar}
@@ -46,21 +68,39 @@ const VerificationScreen = ({ navigation }) => {
         />
         <Text style={styles.title}>Verification</Text>
 
-        <Text style={styles.text}>
-        We sent a verification code to your student email to help verify your account!
+        <Text style={styles.description}>
+          We sent a verification code to your student email to help verify your
+          account!
         </Text>
 
-        <View style={{alignItems: 'center', marginBottom: 85}} >
-        <InputField
-        value={code}
-        setValue={setCode}
-        />
+        <Text style={styles.text}>
+          Username <Text style={{ color: "#FF0000" }}>*</Text>
+        </Text>
+
+        <View style={{ alignItems: "center" }}>
+          <InputField
+            name="username"
+            control={control}
+            rules={{ required: "Username is required" }}
+          />
         </View>
 
-        <View style={{ alignItems: "center", marginBottom: 15 }}>
+        <Text style={styles.text}>
+          Code <Text style={{ color: "#FF0000" }}>*</Text>
+        </Text>
+
+        <View style={{ alignItems: "center" }}>
+          <InputField
+            name="code"
+            control={control}
+            rules={{ required: "Code is required" }}
+          />
+        </View>
+
+        <View style={{ alignItems: "center", marginBottom: 15, marginTop: 40 }}>
           <OnboardingButton
             label={"Verify"}
-            onPress={handleVerify}
+            onPress={handleSubmit(handleVerify)}
           />
         </View>
         <Text style={styles.resendLink}>
@@ -84,17 +124,18 @@ export default VerificationScreen;
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: "center",
+    flex: 1,
+    //justifyContent: "center",
     backgroundColor: "#F4F6F9",
   },
   statusbar: {
     width: 235,
     height: 65,
-    alignSelf: "center"
+    alignSelf: "center",
   },
   verifyIcon: {
-    width: 180,
-    height: 180,
+    width: 100,
+    height: 100,
     alignSelf: "center",
   },
   title: {
@@ -104,7 +145,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 20,
   },
-  text: {
+  description: {
     fontFamily: "Nunito_400Regular",
     fontSize: 16,
     color: "#737171",
@@ -118,5 +159,12 @@ const styles = StyleSheet.create({
     color: "#737171",
     marginHorizontal: 30,
     textAlign: "center",
+  },
+  text: {
+    fontFamily: "Nunito_400Regular",
+    fontSize: 16,
+    color: "#333",
+    marginLeft: 29,
+    textAlign: "left",
   },
 });

@@ -1,3 +1,4 @@
+import { Auth } from "aws-amplify";
 import React, { useState } from "react";
 import {
   SafeAreaView,
@@ -6,18 +7,42 @@ import {
   Image,
   StyleSheet,
   KeyboardAvoidingView,
+  Alert,
 } from "react-native";
+import { useForm } from "react-hook-form";
 
 import InputField from "../components/InputField";
 import OnboardingButton from "../components/OnboardingButton";
 import PwdInput from "../components/PwdInput";
 
 const LoginScreen = ({ navigation }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const handleLogIn = () => {
+  console.log(errors);
+
+  const [loading, setLoading] = useState(false);
+
+  const handleLogIn = async (data) => {
     console.log("Log In");
+    if (loading) {
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await Auth.signIn(
+        String(data.username),
+        String(data.password)
+      );
+      console.log(response);
+    } catch (e) {
+      Alert.alert("Oops", e.message);
+    }
+    setLoading(false);
   };
 
   const onRegisterPressed = () => {
@@ -42,14 +67,23 @@ const LoginScreen = ({ navigation }) => {
         </Text>
 
         <View style={{ alignItems: "center" }}>
-          <InputField value={username} setValue={setUsername} />
+          <InputField
+            name="username"
+            control={control}
+            rules={{ required: "Username is required" }}
+          />
         </View>
 
         <Text style={styles.text}>
           Password <Text style={{ color: "#FF0000" }}>*</Text>
         </Text>
         <View style={{ alignItems: "center" }}>
-          <PwdInput value={password} setValue={setPassword} />
+          <PwdInput
+            name="password"
+            control={control}
+            rules={{ required: "Password is required" }}
+          />
+          {/* add minLength + error message */}
         </View>
 
         <View style={{ marginBottom: 0 }}>
@@ -59,7 +93,10 @@ const LoginScreen = ({ navigation }) => {
         </View>
 
         <View style={{ alignItems: "center", marginBottom: 25 }}>
-          <OnboardingButton label={"Log In"} onPress={handleLogIn} />
+          <OnboardingButton
+            label={loading ? "Loading..." : "Log In"}
+            onPress={handleSubmit(handleLogIn)}
+          />
         </View>
 
         <Text style={styles.registerText}>
@@ -67,7 +104,9 @@ const LoginScreen = ({ navigation }) => {
           <Text
             onPress={onRegisterPressed}
             style={{ color: "#FA8C47", textDecorationLine: "underline" }}
-          > Join
+          >
+            {" "}
+            Join
           </Text>
         </Text>
       </SafeAreaView>

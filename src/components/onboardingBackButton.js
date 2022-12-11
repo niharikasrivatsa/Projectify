@@ -12,7 +12,7 @@ export default function OnboardingBackButton({label, onPress}) {
             position:'absloute',
             marginLeft: 25,
             marginTop: 20,
-            marginBottom: 30,
+            marginBottom: 25,
             width: 44,
             height: 44,
             borderRadius: 100,

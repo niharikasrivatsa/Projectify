@@ -35,7 +35,7 @@ const SkillData = [
 const InterestSkillsSetupScreen = ({ navigation }) => {
   const OnCompletePressed = () => {
     console.warn("Sign In");
-    navigation.navigate("SampleHome");
+    navigation.navigate("Login");
   };
 
   return (
@@ -125,7 +125,7 @@ const InterestSkillsSetupScreen = ({ navigation }) => {
           </View>
 
           <View style={{ alignItems: "center", marginTop: 30 }}>
-            <OnboardingButton label={"Complete"} onPress={OnCompletePressed} />
+            <OnboardingButton label={"Complete Registration"} onPress={OnCompletePressed} />
             <Text
               style={{
                 color: "#FA8C47",

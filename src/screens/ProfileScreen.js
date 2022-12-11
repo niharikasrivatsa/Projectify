@@ -10,6 +10,8 @@ import {
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { SelectMultipleButton } from "react-native-selectmultiple-button";
 import BadgeCard from "../components/BadgeCard";
+import {Auth} from 'aws-amplify';
+
 
 export default class ProfileScreen extends React.Component {
   // need to understand how the components work
@@ -27,6 +29,12 @@ export default class ProfileScreen extends React.Component {
   };
 
   render() {
+
+    const handleSignOut = () =>{
+      Auth.signOut();
+      console.log("Signed out")
+    }
+
     return (
       <SafeAreaView
         style={{
@@ -49,6 +57,7 @@ export default class ProfileScreen extends React.Component {
             <View>
               <Text style={styles.heading1}>Rachel Joy</Text>
               <Text style={styles.email}>rcopreros@dpcdsb.org</Text>
+              <Text style={styles.signOut} onPress={handleSignOut}>SIGN OUT</Text>
             </View>
             <Ionicons
               name="create-outline"
@@ -248,4 +257,12 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontFamily: "Nunito_400Regular",
   },
+  signOut: {
+    textDecorationLine: "underline",
+    fontFamily: "Nunito_700Bold",
+    fontSize: 10,
+    color: "#7B61FF",
+    marginLeft: 10,
+    marginTop: 4
+  }
 });
