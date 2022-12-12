@@ -51,10 +51,10 @@ Note: install git lol [(search it up)](https://git-scm.com/book/en/v2/Getting-St
 3) Add all files you want to push: 
     - `git add .` to add all changed files
     - `git add [filepath]` to add a specific file
-4) Commit the files + add a cute/informative message 😻
+4) Commit the files + add a nice descriptive message 😻
     - `git commit -m "describe your changes"`
 5) Push your commit!
     - `git push`
-    - YAYAYAY u did it fr ‼️🎉
+    - YAYAYAY u did it ‼️🎉
 
 Note: you can also do this through VS Code in Source Control
