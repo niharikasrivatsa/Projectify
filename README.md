@@ -37,11 +37,16 @@ First and foremost, clone the project!
     - react native/react/redux by EQuimper
     - prettier - code formatter
     - material icon theme by Philipp Kief
+   
+4) **Add This File**
+    - Create a new file under the "src" folder named `aws-exports.js`
+    - Copy & Paste [this](https://janviganatra.notion.site/aws-exports-js-e490c312ea0f495baf74633f877aadca) into file
 
-4) **Run `npm start`**
+5) **Run `npm start`**
     - sometimes you need to run `npm install` before running this
     - scan the QR code in the terminal with your phone
     - type `r` in the terminal to reload the app on your phone
+   
 
 ## Git Stuff
 Note: install git lol [(search it up)](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
