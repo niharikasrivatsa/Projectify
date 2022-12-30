@@ -30,26 +30,20 @@ First and foremost, clone the project!
         -  run `node -v`
 
 2) **Download Expo Go/Expo Client on your phone**
-    - this is to help us test on an actual device 
-
-3) **Add Extentions on VS code**
-    - react native tools by Microsoft
-    - react native/react/redux by EQuimper
-    - prettier - code formatter
-    - material icon theme by Philipp Kief
+    - this is to help us see it on an actual device 
+    - android so ios simulator also works
    
 4) **Add This File**
     - Create a new file under the "src" folder named `aws-exports.js`
     - Copy & Paste [this](https://janviganatra.notion.site/aws-exports-js-e490c312ea0f495baf74633f877aadca) into file
 
-5) **Run `npm start`**
-    - sometimes you need to run `npm install` before running this
+5) **Run `npm install` and `npm install`  **
     - scan the QR code in the terminal with your phone
     - type `r` in the terminal to reload the app on your phone
    
 
 ## Git Stuff
-Note: install git lol [(search it up)](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+Note: install git [(search it up)](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 ### Making + Pushing Changes
 1) Always run `git pull` for the most updated version of the code before making changes!
 2) Make your changes to the code
