@@ -37,7 +37,7 @@ First and foremost, clone the project!
     - Create a new file under the "src" folder named `aws-exports.js`
     - Copy & Paste [this](https://janviganatra.notion.site/aws-exports-js-e490c312ea0f495baf74633f877aadca) into file
 
-5) **Run `npm install` and `npm install`  **
+5) **Run `npm install` and `npm install`**
     - Scan the QR code in the terminal with your phone
     - Type `r` in the terminal to reload the app on your phone
    
