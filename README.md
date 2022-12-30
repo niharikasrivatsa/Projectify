@@ -26,20 +26,20 @@ First and foremost, clone the project!
 
 1) **Install Nodejs**
     - [Download | Node.js (nodejs.org)](https://nodejs.org/en/download/) 
-    - check node version (must be 12 or higher) 
+    - Check node version (must be 12 or higher) 
         -  run `node -v`
 
 2) **Download Expo Go/Expo Client on your phone**
-    - this is to help us see it on an actual device 
-    - android so ios simulator also works
+    - This is to help us see it on an actual device 
+    - Android or iOS simulator also works
    
 4) **Add This File**
     - Create a new file under the "src" folder named `aws-exports.js`
     - Copy & Paste [this](https://janviganatra.notion.site/aws-exports-js-e490c312ea0f495baf74633f877aadca) into file
 
 5) **Run `npm install` and `npm install`  **
-    - scan the QR code in the terminal with your phone
-    - type `r` in the terminal to reload the app on your phone
+    - Scan the QR code in the terminal with your phone
+    - Type `r` in the terminal to reload the app on your phone
    
 
 ## Git Stuff
