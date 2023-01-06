@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SafeAreaView, View, Text } from "react-native";
+import { SafeAreaView, View, Text, ScrollView } from "react-native";
 
 import OnboardingButton from "../components/OnboardingButton";
 import OnboardingMultiSelect from "../components/OnboardingMultiSelect";
