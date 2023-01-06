@@ -65,7 +65,7 @@ export default class ExploreProjectCard extends Component{
                     style={styles.button}>
                     <Text
                     style={styles.buttonTxt}>
-                    Intrested 
+                    Interested 
                     </Text>
                 </TouchableOpacity>
             </View>
