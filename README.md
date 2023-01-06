@@ -8,7 +8,7 @@ ideas, meet people to work with on the projects, and earn accomplishments badges
 
 We had like **4 hours** (*yikes!*) to come up with this all, so it was pretty messy you might imagine. BUT! We won second place in
 the hackathon (woot woot #women #in #stem)!! And, that motivated us to really try to develop this (*syde*) project(*ify ;*). This 
-is a first for a lot of us, so enjoy this archive of our *blood, sweat, and tears* + all the lessons we learn along the way! 😍
+is a first for a lot of us, so enjoy this archive of our *blood, sweat, and tears* + all the lessons we learn along the way!
 
 ## Team
 💻 **Developer:** [Niharika Srivatsa](https://github.com/niharikasrivatsa)  
