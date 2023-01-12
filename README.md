@@ -10,6 +10,8 @@ We had like **4 hours** (*yikes!*) to come up with this all, so it was pretty me
 the hackathon (woot woot #women #in #stem)!! And, that motivated us to really try to develop this (*syde*) project(*ify ;*). This 
 is a first for a lot of us, so enjoy this archive of our *blood, sweat, and tears* + all the lessons we learn along the way!
 
+We are still working on the design and development of the project. Find the two iterations of our app [here](https://www.figma.com/proto/fMyEdVA4qwRyJN0MUNTzcA/Projectify?page-id=641%3A15507&node-id=643%3A21143&viewport=241%2C-46%2C0.07&scaling=scale-down&starting-point-node-id=643%3A20382&show-proto-sidebar=1)!
+
 ## Team
 💻 **Developer:** [Niharika Srivatsa](https://github.com/niharikasrivatsa)  
 
