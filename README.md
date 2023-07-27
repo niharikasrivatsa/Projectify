@@ -12,6 +12,8 @@ is a first for a lot of us, so enjoy this archive of our *blood, sweat, and tear
 
 We are still working on the design and development of the project. Find the prototypes of the two iterations of our app [here](https://www.figma.com/proto/fMyEdVA4qwRyJN0MUNTzcA/Projectify?page-id=641%3A15507&node-id=643%3A21143&viewport=241%2C-46%2C0.07&scaling=scale-down&starting-point-node-id=643%3A20382&show-proto-sidebar=1)!
 
+Find the Dev Post Link here: https://devpost.com/software/projectify
+
 ## Team
 💻 **Developer:** [Niharika Srivatsa](https://github.com/niharikasrivatsa)  
 
